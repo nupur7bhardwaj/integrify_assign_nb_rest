@@ -1,13 +1,125 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+*{
+  margin: 10px;
+  padding: 1px;
+  box-sizing: border-box;
+  FONT-WEIGHT: 100;
+ }
+ 
+ .container {
+   padding:10px;
+ }
+ 
+ 
+ .form{
+  margin-top: 0px;
+  margin-bottom: 90px;
+   font-family:default;
+   display: flex;
+   align-items: baseline;
+   justify-content: center;
+   row-gap: 30px;
+   column-gap: 30px;
+   width: 100%;
+ 
+   
+ }
+ 
+ 
+ /* Overall padding*/
+ .article,
+ .form,
+ .countries{
+   padding: 10px 50px;
+ }
+ 
+ 
+ 
+ 
+ 
+ body{
+   background-color: #dfdfdf;
+   color: var(--light-mode-text);
+ }
+ 
+ /* Loading */
+ .loading {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   margin-top: 5rem;
+ }
+ 
+ 
+ .form{
+   color: var(--text-color);
+   background-color: rgb(30, 101, 242);
+   box-shadow: 0 5px 10px hsla(200, 15%, 8%, 0.1);
+   
+ }
+ 
+ 
+ 
+ /*Article component*/
+ .countries {
+   padding: 10px ;
+ }
+ 
+ .table {
+   text-align: center;
+   border: 1px solid black;
+   
+   width: 100%;
+   height: 100%;
+   padding: 10px 10px 0px 0;
+   margin-top: 10px;
+   display:grid;
+   align-content: space-around;
+   order: 5;
+ }
+   
+     .th, .td{
+       
+       padding: 10px;
+       text-align: center;
+       font-weight:bolder;
+       
+      }
+      .td{
+       font-size: medium;
+       font-weight: bold;
+       text-align: center;
+      }
+      
+      .tr{
+        
+        padding: 8px;
+        text-align: center;
+        border: 1px solid black;
+        
+      }
+      
+     
+ 
+ 
+      .img{
+        border-radius: 1px 1px 1px 1px;
+        width: 120px;
+        height: 100px;
+      
+      } 
+      
+      
+   
+ 
+  .form-sub{
+   margin-top: 10px;
+     /* direction: ltr; */
+     display: flex;
+     flex-wrap: wrap;
+     align-content: flex-start;
+     justify-content: space-between;
+     cursor: pointer;
+     /* background-color: blue; */
+ }
+ 
