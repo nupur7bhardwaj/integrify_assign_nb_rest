@@ -9,117 +9,71 @@
    padding:10px;
  }
  
- 
- .form{
-  margin-top: 0px;
-  margin-bottom: 90px;
-   font-family:default;
-   display: flex;
-   align-items: baseline;
-   justify-content: center;
-   row-gap: 30px;
-   column-gap: 30px;
-   width: 100%;
- 
-   
+ body{
+  padding: 10px;
  }
- 
- 
+
  /* Overall padding*/
  .article,
  .form,
  .countries{
    padding: 10px 50px;
  }
- 
- 
- 
- 
- 
- body{
-   background-color: #dfdfdf;
-   color: var(--light-mode-text);
- }
- 
- /* Loading */
- .loading {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
-   margin-top: 5rem;
- }
- 
- 
+
+
  .form{
-   color: var(--text-color);
+  color: var(--text-color);
    background-color: rgb(30, 101, 242);
    box-shadow: 0 5px 10px hsla(200, 15%, 8%, 0.1);
-   
+  margin-top: 0px;
+  margin-bottom: 2px;
+  font-family:default;
+  display: flex;
+  align-items: baseline;
+  justify-content: stretch;
  }
- 
- 
+ .search-input{
+  display: flex;
+  align-items: baseline;
+  justify-content:initial;
+ }
+ .form-sub{
+  margin-top: 10px;
+  direction: ltr;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content:baseline;
+  cursor: pointer;
+  background-color: blue;
+}
+
  
  /*Article component*/
- .countries {
-   padding: 10px ;
- }
  
- .table {
+ 
+ .table{
+  align-items: center;
    text-align: center;
    border: 1px solid black;
-   
    width: 100%;
    height: 100%;
-   padding: 10px 10px 0px 0;
+   padding: 10px 10px 0px 0px;
    margin-top: 10px;
-   display:grid;
-   align-content: space-around;
-   order: 5;
+   display:grid;    
  }
-   
-     .th, .td{
-       
-       padding: 10px;
-       text-align: center;
-       font-weight:bolder;
-       
-      }
-      .td{
-       font-size: medium;
-       font-weight: bold;
-       text-align: center;
-      }
-      
-      .tr{
-        
-        padding: 8px;
-        text-align: center;
-        border: 1px solid black;
-        
-      }
-      
-     
- 
- 
-      .img{
-        border-radius: 1px 1px 1px 1px;
+ .img{
+        border-radius: 2px 2px 1px 1px;
         width: 120px;
         height: 100px;
-      
       } 
       
       
    
- 
-  .form-sub{
-   margin-top: 10px;
-     /* direction: ltr; */
-     display: flex;
-     flex-wrap: wrap;
-     align-content: flex-start;
-     justify-content: space-between;
-     cursor: pointer;
-     /* background-color: blue; */
- }
- 
+.error{
+  padding: 10px;
+  font-weight: bolder;
+  display:block;
+  align-items: center;
+}
+  

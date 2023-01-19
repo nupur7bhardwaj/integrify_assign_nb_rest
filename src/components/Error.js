@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Error() {
   return (
-    <div>Error</div>
+    <div className="error">Error Country Page cannot be diaplayed</div>
   )
 }

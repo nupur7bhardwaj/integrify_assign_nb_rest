@@ -1,8 +1,17 @@
 import { useState, useEffect } from "react";
+import * as React from 'react';
 import Article from "./Article";
+import Pagination from "./Pagination";
+
+
 
 export default function Countries() {
   const [countries, setCountries] = useState([]);
+  const [countriesPerPage, setCountriesPerPage] = useState(5);
+  const [currentPage, setCurrentPage] = useState(1);
+  
+
+  
   const [searchText, setSearchText] = useState("");
   const regions = [
     {
@@ -25,6 +34,12 @@ export default function Countries() {
     },
   ];
 
+  const updateCountryPerPage = (resultsPerPage) => {
+      setCountriesPerPage(resultsPerPage);
+      setCurrentPage(1);
+  }
+
+
   useEffect(() => {
     document.title = `Countries`;
   }, []);
@@ -35,6 +50,7 @@ export default function Countries() {
         const res = await fetch("https://restcountries.com/v3.1/all");
         const data = await res.json();
         setCountries(data);
+       
       } catch (error) {
         console.error(error);
       }
@@ -76,8 +92,7 @@ export default function Countries() {
     e.preventDefault();
     filterByRegion();
   }
-
-  return (
+return (
     <>
       {!countries ? (
         <h1 className="header">
@@ -127,12 +142,27 @@ export default function Countries() {
           </div>
 
           <div className="table ">
-            {countries.map((country) => (
+            {countries.slice(((currentPage-1) * countriesPerPage),(currentPage * countriesPerPage)).map((country) => (
               <Article key={country.name.common} {...country} />
+
+
+              
             ))}
+
+            
+            
           </div>
+          
+          <Pagination totalCountries= {countries.length} countriesPerPage= {countriesPerPage} updateCountryPerPage= {updateCountryPerPage} setCurrentPage= {setCurrentPage} />
         </section>
+        
+        
+        
       )}
-    </>
-  );
-}
+
+      
+  
+    
+  
+  </>
+)}

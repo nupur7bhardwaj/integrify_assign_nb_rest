@@ -1,5 +1,15 @@
-import React from "react";
+import * as React from 'react';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import { Link } from "react-router-dom";
+
+
+
 
 export default function Article({
   flags,
@@ -10,53 +20,48 @@ export default function Article({
 }) {
   return (
     
-        <>
+    <>
         
-        <table >
+        <TableContainer component={Paper} >
+      <Table sx={{ minWidth: 650 }} aria-label="caption table">
         
-        <thead className="table-header">
+      <TableHead>
+          <TableRow>
+            <TableCell>Flags &nbsp; &nbsp;</TableCell>
+            <TableCell>Name &nbsp; &nbsp;</TableCell>
+            <TableCell>Population &nbsp; &nbsp;</TableCell>
+            <TableCell>Language &nbsp;&nbsp; </TableCell>
+            <TableCell>Region &nbsp; &nbsp;</TableCell>
+            <TableCell>  &nbsp;
+            </TableCell>
+          </TableRow>
           
-          <tr> 
-            <th>Flags &nbsp; &nbsp;</th>
-            <th>Name &nbsp; &nbsp;</th>
-            <th>Population &nbsp; &nbsp;</th>
-            <th>Language &nbsp;&nbsp; </th>
-            <th>Region &nbsp; &nbsp;</th>
-            <th>  &nbsp;
-            </th></tr>
-          
-          </thead>
-          <tbody>
-          <tr>
-          <td>
-          <img src={flags.svg} alt="" className="img" /></td>
-         
-          <td>{name.common}</td>
-          
-          <td>{population.toLocaleString()}</td>
-          <td>{language}</td>
-          <td>{region}</td>
-          <td><Link
-                to={`/${name.common}`}
-                className="link">
-              
-                &rarr; 
+      </TableHead>
+
+          <TableBody>
+            <TableRow>
+              <TableCell><img src={flags.svg} alt="" className="img" /></TableCell>
+              <TableCell>{name.common}</TableCell>
+              <TableCell>{population.toLocaleString()}</TableCell>
+              <TableCell>{language}</TableCell>
+              <TableCell>{region}</TableCell>
+              <TableCell><Link to={`/${name.common}`}className="link"> &rarr; 
               </Link>
-              </td>
-              </tr>
-              </tbody>
+              </TableCell>
+           </TableRow>
+          </TableBody>
+      </Table>
          
-              
+        </TableContainer>
         
-            
         
-            
-          
-        </table>
         
-        </>
+    </>     
         
-    
   );
 }
-// <div to={`/${name.common}`}>  </div//
+        
+        
+          
+    
+ 
