@@ -18,6 +18,7 @@ const Pagination1 = ({countriesPerPage, totalCountries, updateCountryPerPage, se
   return (
     <div>
         <select value={countriesPerPage} name="page" id="page-select" onChange={(event) => updateCountryPerPage(event.target.value)}>
+          <h4> Rows per page </h4>
    
     <option value="5" >5</option>
     <option value="10">10</option>

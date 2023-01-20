@@ -122,7 +122,7 @@ return (
             </form>
 
             
-
+            
             <form onSubmit={handleFilterByRegion}> 
             <h3 className="form-submit">Select Country by Region</h3>
               <select
